@@ -13,7 +13,11 @@ body, html {
 .cell {
     border: 1px solid black;
     height: 100px;
-    width: 100px;  
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    cursor: pointer;
 }
 
 .cell:first-child,
@@ -66,4 +70,42 @@ border-bottom: none;
 
 .winning-message.show {
     display: flex;
+}
+
+.cell.x {
+    background-image: url("clipart3110831.png");
+    background-size: 80px 80px;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    cursor: auto;
+}
+
+.cell.o {
+    background-image: url("clipart4221682.png");
+    background-size: 80px 80px;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    cursor: auto;
+}
+
+.container.x .cell:not(.x):not(.o):hover {
+    background-image: url("clipart3110831.png");
+    background-size: 80px 80px;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    cursor: auto;
+    opacity: 0.3;
+}
+
+.container.o .cell:not(.x):not(.o):hover {
+    background-image: url("clipart4221682.png");
+    background-size: 80px 80px;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    cursor: auto;
+    opacity: 0.3;
 }
